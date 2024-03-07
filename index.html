@@ -11,14 +11,14 @@
 
         let text = ""
         jsonArray.forEach(json => {
-            if(json.has_pages) {
-                text += `<p><a href="${json.homepage}">${json.name}</a></p>`
+            if(json.has_pages && json.name != 'alexsch01.github.io') {
+                text += `<p><a href="${json.name}">/${json.name}</a></p>`
             }
         })
         document.querySelector('#main').innerHTML = text
     </script>
 </head>
 <body>
-    <div id="main"></div>
+    <div id="main" style="text-align: center"></div>
 </body>
 </html>
