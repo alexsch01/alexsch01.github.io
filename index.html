@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alexsch01 pages</title>
+
+    <script type="module">
+        const resp = await fetch('https://api.github.com/users/alexsch01/repos')
+        const jsonArray = await resp.json()
+
+        let text = ""
+        jsonArray.forEach(json => {
+            if(json.has_pages) {
+                text += `<p><a href="${json.homepage}">${json.name}</a></p>`
+            }
+        })
+        document.querySelector('#main').innerHTML = text
+    </script>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
