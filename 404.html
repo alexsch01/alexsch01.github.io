@@ -1,6 +1,7 @@
 <script>
-  const currentURL = window.location.href
-  if (currentURL != currentURL.toLowerCase()) {
+  currentURL = window.location.href
+  lowerCaseURL = currentURL.toLowerCase()
+  if (currentURL != lowerCaseURL) {
     location.replace(lowerCaseURL)
   } else {
     location.replace(window.location.origin)
