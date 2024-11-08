@@ -9,7 +9,7 @@
         const resp = await fetch('https://api.github.com/users/alexsch01/repos')
         const jsonArray = await resp.json()
 
-        let text = '<h2>alexsch01 on <a href="https://github.com/alexsch01">GitHub</a></h2>'
+        let text = '<h2>alexsch01 on <a href="https://github.com/alexsch01">GitHub</a> Pages</h2>'
         for(const json of jsonArray) {
             if(json.has_pages && json.name != 'alexsch01.github.io') {
                 text += `<p><a href="${json.name}/">/${json.name}</a></p>`
