@@ -12,7 +12,7 @@
         let text = '<h2>alexsch01 on <a href="https://github.com/alexsch01">GitHub</a> Pages</h2>'
         for(const json of jsonArray) {
             if(json.has_pages && json.name != 'alexsch01.github.io') {
-                text += `<p><a href="${json.name}/">/${json.name}</a></p>`
+                text += `<p><a href="/${json.name}/">/${json.name}</a></p>`
             }
         }
         document.querySelector('#main').innerHTML = text
