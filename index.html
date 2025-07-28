@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alexsch01 pages</title>
-
+</head>
+<body>
+    <div id="main" style="text-align: center; margin-top: 20px;"></div>
     <script type="module">
         const resp = await fetch('https://api.github.com/users/alexsch01/repos')
         const jsonArray = await resp.json()
@@ -17,8 +19,5 @@
         }
         document.querySelector('#main').innerHTML = text
     </script>
-</head>
-<body>
-    <div id="main" style="text-align: center; margin-top: 20px;"></div>
 </body>
 </html>
